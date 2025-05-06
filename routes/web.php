@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\HomeController;
  use App\Http\Controllers\DashboardController;
@@ -20,7 +21,12 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[HomeController::class,'home'])->name('home');
+
+
+
 Route::get('/redirects', [HomeController::class, 'redirects'])->middleware(['auth'])->name('redirects');
+
+
 
 Route::middleware([
     'auth:sanctum',
@@ -28,4 +34,11 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+    Route::get('/users',[AdminController::class,'user']);
+    Route::get('/deleteUser/{id}',[AdminController::class,'deleteUser']);
+    Route::get('/foodmenu',[AdminController::class,'foodMenu']);
+    Route::post('/storefood',[AdminController::class,'storeFood']);
+    Route::get('/deletefood/{id}',[AdminController::class,'deletefood']);
+
+    
 });
