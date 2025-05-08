@@ -19,3 +19,6 @@
   <!-- Custom js for this page -->
   <script src="{{asset('/')}}backend/assets/js/dashboard.js"></script>
   <!-- End custom js for this page -->
+
+  <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->

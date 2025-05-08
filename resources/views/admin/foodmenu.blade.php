@@ -73,6 +73,7 @@
                                                           <img src="{{ asset('uploads/food/' . $food->image) }}" alt="{{ $food->title }}" height="40" width="60" class="rounded">
                                                       </td>
                                                       <td>
+                                                        <a href="{{ url('/editfood', $food->id) }}" class="btn btn-sm btn-primary">Edit</a>
                                                           <a href="{{ url('/deletefood', $food->id) }}" class="btn btn-sm btn-danger">Delete</a>
                                                       </td>
                                                   </tr>

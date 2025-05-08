@@ -94,7 +94,7 @@
           </a>
         </li>
         <li class="nav-item menu-items">
-          <a class="nav-link" href="pages/tables/basic-table.html">
+          <a class="nav-link" href="{{ url('/viewchefs') }}">
             <span class="menu-icon">
               <i class="mdi mdi-table-large"></i>
             </span>
@@ -102,7 +102,7 @@
           </a>
         </li>
         <li class="nav-item menu-items">
-          <a class="nav-link" href="pages/charts/chartjs.html">
+          <a class="nav-link" href="{{ url('/viewreservation') }}">
             <span class="menu-icon">
               <i class="mdi mdi-chart-bar"></i>
             </span>
